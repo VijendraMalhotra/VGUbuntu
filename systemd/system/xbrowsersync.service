@@ -1,0 +1,13 @@
+[Unit]
+Description=Xbrowsersync service
+After=network.target
+StartLimitIntervalSec=2
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+User=vijendra
+ExecStart=node /mnt/DataDrive/HostedSites/xbrowsersync.malhotra/dist/api.js
+
+[Install]
+WantedBy=multi-user.target

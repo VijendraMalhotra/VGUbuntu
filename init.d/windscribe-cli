@@ -1,0 +1,46 @@
+#! /bin/sh
+# /etc/init.d/windscribe
+
+### BEGIN INIT INFO
+# Provides:          windscribe
+# Required-Start:    $local_fs $network $named $time $syslog
+# Required-Stop:     $local_fs $network $named $time $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start windscribe daemon at boot time
+# Description:       Enable windscribe service provided by daemon.
+### END INIT INFO
+
+PID=/etc/windscribe/windscribe.pid
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+
+        /usr/bin/windscribe start
+
+    ;;
+  status)
+
+    if [ -f $PID ]; then
+        echo "Running"
+    else
+        echo "Stopped"
+	exit 1
+    fi   
+
+    ;;
+  stop)
+
+    /usr/bin/windscribe stop
+
+    ;;
+  *)
+    echo "Usage: /etc/init.d/windscribe-cli {start|stop|status}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+
