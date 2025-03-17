@@ -1,0 +1,2 @@
+vijendra ALL=(ALL) NOPASSWD: /usr/bin/crontab 
+
