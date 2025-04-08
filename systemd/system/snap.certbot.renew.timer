@@ -1,14 +1,14 @@
 [Unit]
 # Auto-generated, DO NOT EDIT
 Description=Timer renew for snap application certbot.renew
-Requires=snap-certbot-4482.mount
-After=snap-certbot-4482.mount
+Requires=snap-certbot-4557.mount
+After=snap-certbot-4557.mount
 X-Snappy=yes
 
 [Timer]
 Unit=snap.certbot.renew.service
-OnCalendar=*-*-* 01:50
-OnCalendar=*-*-* 17:20
+OnCalendar=*-*-* 10:52
+OnCalendar=*-*-* 18:23
 
 [Install]
 WantedBy=timers.target
