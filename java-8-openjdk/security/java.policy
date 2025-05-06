@@ -26,9 +26,6 @@ grant codeBase "file:/usr/lib/jvm/java-8-openjdk-armhf/jre/lib/ext/*" {
 grant codeBase "file:/usr/lib/jvm/java-8-openjdk-i386/jre/lib/ext/*" {
         permission java.security.AllPermission;
 };
-grant codeBase "file:/usr/lib/jvm/java-8-openjdk-ia64/jre/lib/ext/*" {
-        permission java.security.AllPermission;
-};
 grant codeBase "file:/usr/lib/jvm/java-8-openjdk-loong64/jre/lib/ext/*" {
         permission java.security.AllPermission;
 };
