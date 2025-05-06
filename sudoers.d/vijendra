@@ -1,0 +1,2 @@
+vijendra ALL=(ALL) NOPASSWD: /usr/bin/apt-get, /usr/bin/snap
+
